@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>网址导航</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('/images/maobailing.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: rgba(255,255,255,0.7); /* 半透明白色 */
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 32px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .search-box {
+            display: flex;
+            margin-bottom: 24px;
+        }
+        .search-box input[type="text"] {
+            flex: 1;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+        .search-box button {
+            padding: 8px 16px;
+            font-size: 16px;
+            border: 1px solid #4CAF50;
+            background: #4CAF50;
+            color: #fff;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;              /* 横向排列 */
+            justify-content: center;    /* 居中 */
+            gap: 24px;                  /* logo 之间的间距 */
+            flex-wrap: wrap;            /* 超出自动换行 */
+        }
+        ul li {
+            margin: 0;                  /* 去掉竖直间距 */
+        }
+        ul li a {
+            text-decoration: none;
+            color: #2196F3;
+            font-size: 18px;
+        }
+        ul li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>网址导航</h1>
+        <form class="search-box" action="https://www.baidu.com/s" method="get" target="_blank">
+            <input type="text" name="wd" placeholder="搜索百度">
+            <button type="submit">搜索</button>
+        </form>
+        <ul>
+            <li>
+                <a href="https://www.baidu.com/" target="_blank">
+                    <img src="https://www.baidu.com/favicon.ico" alt="百度" style="height:32px;vertical-align:middle;">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.bilibili.com/" target="_blank">
+                    <img src="https://www.bilibili.com/favicon.ico" alt="哔哩哔哩" style="height:32px;vertical-align:middle;">
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/" target="_blank">
+                    <img src="https://github.com/favicon.ico" alt="GitHub" style="height:32px;vertical-align:middle;">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.csdn.net/" target="_blank">
+                    <img src="https://www.csdn.net/favicon.ico" alt="CSDN" style="height:32px;vertical-align:middle;">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.zhihu.com/" target="_blank">
+                    <img src="https://www.zhihu.com/favicon.ico" alt="知乎" style="height:32px;vertical-align:middle;">
+                </a>
+            </li>
+            <li>
+                <a href="https://www.winworldpc.com/" target="_blank">
+                    <img src="https://www.winworldpc.com/favicon.ico" alt="WinWorldPC" style="height:32px;vertical-align:middle;">
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
