@@ -1,31 +1,108 @@
-<html>
+<!DOCTYPE html>
+<html lang="zh-cn">
 <head>
 <title>404 error</title>
+<meta charset="utf-8">
 <link rel="icon" href="/images/icon.png" sizes="16x16" type="image/png"> 
-
-</head>
-    <body>
-	<h1 style="text-align: center;">404</h1>
-<h1 style="text-align: center;">页面未找到</h1>
-<h1 style="text-align: center;">The Page not found</h1>
-<p align="center" style="font-size: 25px;">返回<a href="/index.html" style="text-decoration: none;">主页</a></p>
+<!-- 引入 Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 <style>
-    @media screen and (orientation: landscape) {body {
-    width: 100%;
-    height: 100%;
-    background-image: url(images/maobailing.jpg);
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', '微软雅黑', Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (orientation: landscape) {
+  body {
+    background-image: url(/images/maobailing.jpg);
     background-repeat: no-repeat;
-    background-size:cover;
-        }}
-    @media screen and (orientation: portrait) {
-      body {
-        width: 100%;
-    height: 100%;
-          background-image: url(images/mo.jpg);
-          background-repeat: no-repeat;
-          background-size:100%;
-      }
-    }
-    </style>
+    background-size: cover;
+  }
+}
+@media screen and (orientation: portrait) {
+  body {
+    background-image: url(/images/mo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+.main-card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  padding: 40px 32px 32px 32px;
+  max-width: 480px;
+  width: 96%;
+  margin: 40px auto;
+  text-align: center;
+  backdrop-filter: blur(2px);
+}
+.main-card h1 {
+  font-size: 2.2em;
+  margin-bottom: 12px;
+  font-weight: 700;
+  color: #2d3a4b;
+  letter-spacing: 2px;
+}
+.main-card p {
+  font-size: 1.1em;
+  color: #444;
+  margin: 18px 0 0 0;
+}
+.main-card a {
+  color: #fff;
+  background: #1976d2;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 18px;
+  display: inline-block;
+  box-shadow: 0 2px 8px rgba(25, 118, 210, 0.08);
+}
+.main-card a:hover {
+  background: #0d47a1;
+  color: #e3e3e3;
+  text-decoration: underline;
+}
+.avatar {
+  display: block;
+  margin: 0 auto 24px auto;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1976d2;
+}
+@media (max-width: 600px) {
+  .main-card {
+    padding: 24px 8px 18px 8px;
+    max-width: 99vw;
+  }
+  .main-card h1 {
+    font-size: 1.3em;
+  }
+  .main-card a {
+    padding: 10px 12px;
+    font-size: 0.98em;
+  }
+}
+</style>
+</head>
+<body>
+  <div class="main-card">
+    <img class="avatar" src="/images/icon.png" alt="头像">
+    <h1>404</h1>
+    <h1>页面未找到</h1>
+    <h1 style="font-size:1.2em;font-weight:400;margin-bottom:18px;">The Page not found</h1>
+    <p>你访问的页面不存在或已被删除。</p>
+    <a href="/index.html">返回主页</a>
+  </div>
 </body>
 </html>
