@@ -94,6 +94,15 @@ body {
   background: #0d47a1;
   transform: translateY(-2px) scale(1.04);
 }
+.avatar {
+  display: block;
+  margin: 0 auto 24px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #1976d2;
+}
 @media (max-width: 600px) {
   .main-card {
     padding: 24px 8px 18px 8px;
@@ -111,6 +120,7 @@ body {
 </head>
 <body>
   <div class="main-card">
+    <img class="avatar" src="/images/icon.png" alt="头像">
     <h1>欢迎来到 Chromedge 的个人主页</h1>
     <p>我是一个六年级小学生，Bilibili: 
       <a class="bili-link" href="https://space.bilibili.com/3546560300321230" target="_blank">Chromedge</a>
