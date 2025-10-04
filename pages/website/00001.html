@@ -3,29 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <title>网址导航</title>
+    <link rel="icon" href="/images/icon.png" sizes="16x16" type="image/png">
+    <!-- 引入 Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-image: url('/images/maobailing.jpg');
-            background-repeat: no-repeat;
-            background-size: cover;
             margin: 0;
             padding: 0;
+            font-family: 'Roboto', '微软雅黑', Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .container {
-            max-width: 600px;
+        @media screen and (orientation: landscape) {
+            body {
+                background-image: url(/images/maobailing.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        @media screen and (orientation: portrait) {
+            body {
+                background-image: url(/images/mo.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        .main-card {
+            background: rgba(255,255,255,0.85);
+            border-radius: 18px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+            padding: 40px 32px 32px 32px;
+            max-width: 700px;
+            width: 98%;
             margin: 40px auto;
-            background: rgba(255,255,255,0.7); /* 半透明白色 */
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            padding: 32px;
-        }
-        h1 {
             text-align: center;
+            backdrop-filter: blur(2px);
+        }
+        .main-card h1 {
+            font-size: 2em;
+            margin-bottom: 18px;
+            font-weight: 700;
+            color: #2d3a4b;
+            letter-spacing: 2px;
         }
         .search-box {
             display: flex;
             margin-bottom: 24px;
+            justify-content: center;
         }
         .search-box input[type="text"] {
             flex: 1;
@@ -34,39 +60,66 @@
             border: 1px solid #ccc;
             border-radius: 4px 0 0 4px;
             outline: none;
+            min-width: 0;
         }
         .search-box button {
             padding: 8px 16px;
             font-size: 16px;
-            border: 1px solid #4CAF50;
-            background: #4CAF50;
+            border: 1px solid #1976d2;
+            background: #1976d2;
             color: #fff;
             border-radius: 0 4px 4px 0;
             cursor: pointer;
+            transition: background 0.2s;
+        }
+        .search-box button:hover {
+            background: #0d47a1;
         }
         ul {
             list-style: none;
             padding: 0;
-            display: flex;              /* 横向排列 */
-            justify-content: center;    /* 居中 */
-            gap: 24px;                  /* logo 之间的间距 */
-            flex-wrap: wrap;            /* 超出自动换行 */
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 0;
         }
         ul li {
-            margin: 0;                  /* 去掉竖直间距 */
+            margin: 0;
         }
         ul li a {
             text-decoration: none;
-            color: #2196F3;
+            color: #1976d2;
             font-size: 18px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: color 0.2s;
         }
         ul li a:hover {
-            text-decoration: underline;
+            color: #0d47a1;
+        }
+        ul li img {
+            height: 32px;
+            margin-bottom: 6px;
+        }
+        @media (max-width: 600px) {
+            .main-card {
+                padding: 24px 8px 18px 8px;
+                max-width: 99vw;
+            }
+            .main-card h1 {
+                font-size: 1.3em;
+            }
+            .search-box button {
+                padding: 10px 8px;
+                font-size: 0.98em;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="main-card">
         <h1>网址导航</h1>
         <form class="search-box" action="https://www.baidu.com/s" method="get" target="_blank">
             <input type="text" name="wd" placeholder="搜索百度">
@@ -75,32 +128,32 @@
         <ul>
             <li>
                 <a href="https://www.baidu.com/" target="_blank">
-                    <img src="https://www.baidu.com/favicon.ico" alt="百度" style="height:32px;vertical-align:middle;">
+                    <img src="https://www.baidu.com/favicon.ico" alt="百度">百度
                 </a>
             </li>
             <li>
                 <a href="https://www.bilibili.com/" target="_blank">
-                    <img src="https://www.bilibili.com/favicon.ico" alt="哔哩哔哩" style="height:32px;vertical-align:middle;">
+                    <img src="https://www.bilibili.com/favicon.ico" alt="哔哩哔哩">哔哩哔哩
                 </a>
             </li>
             <li>
                 <a href="https://github.com/" target="_blank">
-                    <img src="https://github.com/favicon.ico" alt="GitHub" style="height:32px;vertical-align:middle;">
+                    <img src="https://github.com/favicon.ico" alt="GitHub">GitHub
                 </a>
             </li>
             <li>
                 <a href="https://www.csdn.net/" target="_blank">
-                    <img src="https://www.csdn.net/favicon.ico" alt="CSDN" style="height:32px;vertical-align:middle;">
+                    <img src="https://www.csdn.net/favicon.ico" alt="CSDN">CSDN
                 </a>
             </li>
             <li>
                 <a href="https://www.zhihu.com/" target="_blank">
-                    <img src="https://www.zhihu.com/favicon.ico" alt="知乎" style="height:32px;vertical-align:middle;">
+                    <img src="https://www.zhihu.com/favicon.ico" alt="知乎">知乎
                 </a>
             </li>
             <li>
                 <a href="https://www.winworldpc.com/" target="_blank">
-                    <img src="https://www.winworldpc.com/favicon.ico" alt="WinWorldPC" style="height:32px;vertical-align:middle;">
+                    <img src="https://www.winworldpc.com/favicon.ico" alt="WinWorldPC">WinWorldPC
                 </a>
             </li>
         </ul>
